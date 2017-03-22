@@ -1,0 +1,6 @@
+.head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 150px;
+}

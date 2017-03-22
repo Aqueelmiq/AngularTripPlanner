@@ -1,6 +1,13 @@
-<div class="jumbotron jumbotron-fluid bg-info text-white text-center">
+<div class="head jumbotron jumbotron-fluid bg-info text-white text-center">
+  <div class="col-sm-3 push-sm-9">
+    <strong (click)="onLogout()"> Logout </strong>
+  </div>
   <h1 class="display-4">
     {{title}}
   </h1>
   <p class="lead"> The best way to book your whole trip </p>
 </div>
+<div class="container-fluid">
+  <router-outlet></router-outlet>
+</div>
+
