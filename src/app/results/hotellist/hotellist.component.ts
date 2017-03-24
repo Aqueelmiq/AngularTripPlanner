@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Hotel} from "../../models/Hotel.js";
 
 @Component({
   selector: 'app-hotellist',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HotellistComponent implements OnInit {
 
-  constructor() { }
+  @Input() hotels:Hotel[];
+
+  constructor() {}
+
+  onHotelData2(hotels) {
+    this.hotels = hotels;
+  }
 
   ngOnInit() {
   }

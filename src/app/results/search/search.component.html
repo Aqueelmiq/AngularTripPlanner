@@ -6,10 +6,11 @@
 </div>
 <div class="col-md-10 push-md-1">
   <ul class="list-group">
-    <li class="list-group-item" *ngFor="let suggestion of suggestions | async">
-      <div (click)="getDeals(suggestion)">
+    <li *ngFor="let suggestion of suggestions | async"
+        class="list-group-item"
+        (mouseover)="highlight($event)" (mouseout)="dehighlight($event)"
+        (click)="getDeals(suggestion)">
         {{ suggestion.name }}
-      </div>
     </li>
   </ul>
 </div>
